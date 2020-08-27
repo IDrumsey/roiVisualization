@@ -1,21 +1,279 @@
 html,
 body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+h4 {
+  margin: 0;
 }
 
 .container {
-    width: 100%;
-    height: 100%;  
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  background: #fff;
+}
+
+.Section {
+  border: #000 2px solid;
+  border-radius: 3px;
+}
+
+.Important-Info {
+  grid-column-start: 2;
+  grid-column-end: 8;
+  grid-row-start: 2;
+  grid-row-end: 20;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  text-align: center;
+  position: relative;
+}
+
+.Important-Info-Total-Value {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.Important-Info-Total-Value-Title {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Important-Info-Total-Value-Value {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Important-Info-Total-Gain {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.Important-Info-Total-Gain-Title {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Important-Info-Total-Gain-Value {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Important-Info-Day-Gain {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.Important-Info-Day-Gain-Title {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Important-Info-Day-Gain-Value {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Holdings {
+  grid-column-start: 9;
+  grid-column-end: 19;
+  grid-row-start: 2;
+  grid-row-end: 8;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, 1fr);
+}
+
+.Holdings-Head {
+  grid-row: 1 / 3;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.Holdings-Head-Title {
+  grid-column: 2/7;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.Holdings-Head-Update {
+  grid-column: 7/9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Update {
+}
+
+.Holdings-Content {
+  grid-row: 3 / 9;
+}
+
+.Graph {
+  grid-column-start: 9;
+  grid-column-end: 19;
+  grid-row-start: 10;
+  grid-row-end: 20;
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: 1fr;
+}
+
+.Graph-Canvas {
+  grid-row: 1/9;
+}
+
+.Graph-Timeframe {
+  grid-row: 9/11;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.Graph-Timeframe div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: #000 2px solid;
+  border-right: #000 2px solid;
+  border-left: #000 2px solid;
+  border-radius: 2px;
+  transition: background 500ms;
+}
+
+.Graph-Timeframe div:hover {
+  background: #4ec49b;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  .Important-Info {
+    grid-column-start: 3;
+    grid-column-end: 19;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  .Important-Info-Total-Value {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+  }
+  .Important-Info-Total-Value-Title {
+    grid-row-start: 1;
+    grid-row-end: 4;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom, #050842, #01021e);
-}
+  }
+  .Important-Info-Total-Value-Value {
+    grid-row-start: 4;
+    grid-row-end: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-#graph {
-    border: #fff 2px solid;
-    border-radius: 5px;
+  .Important-Info-Total-Gain {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+  }
+  .Important-Info-Total-Gain-Title {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Important-Info-Total-Gain-Value {
+    grid-row-start: 4;
+    grid-row-end: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Important-Info-Day-Gain {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+  }
+  .Important-Info-Day-Gain-Title {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Important-Info-Day-Gain-Value {
+    grid-row-start: 4;
+    grid-row-end: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Holdings {
+    grid-column-start: 3;
+    grid-column-end: 19;
+    grid-row-start: 6;
+    grid-row-end: 11;
+  }
+
+  .Graph {
+    grid-column-start: 3;
+    grid-column-end: 19;
+    grid-row-start: 12;
+    grid-row-end: 19;
+  }
 }

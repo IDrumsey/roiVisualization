@@ -1,14 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-    <title>Home</title>
-</head>
-<body>
-    <div class="container"><canvas id="graph"></canvas></div>
-    <script src="index.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="graph.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Stats</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="Important-Info Section">
+        <div class="Important-Info-Total-Value">
+          <div class="Important-Info-Total-Value-Title">
+            <h4>Total Value</h4>
+          </div>
+          <div class="Important-Info-Total-Value-Value">
+            <h4>$1441.23</h4>
+          </div>
+        </div>
+        <div class="Important-Info-Total-Gain">
+          <div class="Important-Info-Total-Gain-Title">
+            <h4>Total Gain</h4>
+          </div>
+          <div class="Important-Info-Total-Gain-Value">
+            <h4>12.73%</h4>
+          </div>
+        </div>
+        <div class="Important-Info-Day-Gain">
+          <div class="Important-Info-Day-Gain-Title">
+            <h4>Today's Gain</h4>
+          </div>
+          <div class="Important-Info-Day-Gain-Value">
+            <h4>$10.54</h4>
+          </div>
+        </div>
+      </div>
+      <div class="Holdings Section">
+        <div class="Holdings-Head">
+          <div class="Holdings-Head-Title"><h4>Portfolio Holdings</h4></div>
+          <div class="Holdings-Head-Update">
+            <a class="Update"
+              ><h4>Update</h4>
+              <i class="fa fa-pencil"></i
+            ></a>
+          </div>
+        </div>
+        <div class="Holdings-Content"></div>
+      </div>
+      <div class="Graph Section">
+        <div class="Graph-Canvas">
+          <canvas></canvas>
+        </div>
+        <div class="Graph-Timeframe">
+          <div class="oneDay"><h4>1D</h4></div>
+          <div class="oneWeek"><h4>1W</h4></div>
+          <div class="oneMonth"><h4>1M</h4></div>
+          <div class="threeMonths"><h4>3M</h4></div>
+          <div class="sixMonths"><h4>6M</h4></div>
+          <div class="oneYear"><h4>1Y</h4></div>
+          <div class="threeYears"><h4>3Y</h4></div>
+          <div class="fiveYears"><h4>5Y</h4></div>
+          <div class="AllTime"><h4>All</h4></div>
+        </div>
+      </div>
+    </div>
+    <!--<script src="graph.js"></script>!-->
+  </body>
 </html>
